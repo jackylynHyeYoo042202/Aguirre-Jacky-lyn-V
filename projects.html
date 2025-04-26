@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiliTrade Online Marketplace - Project Showcase</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo" class="logo-img">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="skills.html"><i class="fas fa-cogs"></i> Skills</a></li>
+                    <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Overview Section -->
+    <section class="project-overview">
+        <img src="assets/images/pilitrade.png" alt="PiliTrade Logo" class="project-logo">
+        <h2>PiliTrade Online Marketplace</h2>
+        <p>
+            PiliTrade Online Marketplace is a capstone project designed to recognize the economic potential of the Pili industry. 
+            By leveraging digital technology, the system connects local sellers with buyers, promoting economic growth and expanding market reach.
+        </p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2>Key Features</h2>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-store"></i>
+                <h3>Marketplace</h3>
+                <p>Connects local sellers with buyers to promote Pili products.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-user-plus"></i>
+                <h3>Easy Registration</h3>
+                <p>Simple onboarding process for sellers and buyers.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-comments"></i>
+                <h3>Messaging</h3>
+                <p>Enable communication between sellers and buyers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <h2>System Screenshots</h2>
+        <p>Explore the various pages and features of the PiliTrade Online Marketplace system.</p>
+        <div class="gallery">
+            <img src="assets/images/1.jpg" alt="Screenshot 1" class="gallery-image">
+            <img src="assets/images/2.jpg" alt="Screenshot 2" class="gallery-image">
+            <img src="assets/images/3.jpg" alt="Screenshot 3" class="gallery-image">
+            <img src="assets/images/4.jpg" alt="Screenshot 4" class="gallery-image">
+            <img src="assets/images/5.jpg" alt="Screenshot 5" class="gallery-image">
+            <img src="assets/images/6.jpg" alt="Screenshot 6" class="gallery-image">
+            <img src="assets/images/7.jpg" alt="Screenshot 7" class="gallery-image">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Jacky-lyn Valdez Aguirre. All rights reserved.</p>
+            <p>Built with passion, persistence, and a pinch of magic ✨ by Jacky-lyn Valdez Aguirre.</p>
+            <p>
+                <a href="mailto:aguirrejackylyn@gmail.com" class="footer-link">
+                    <i class="fas fa-envelope"></i> aguirrejackylyn@gmail.com
+                </a> | 
+                <a href="https://www.facebook.com/profile.php?id=100092649680479" target="_blank" class="footer-link">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a> | 
+                <a href="https://www.instagram.com/itsmejacky_ot12_tm?igsh=eDRyNm5uNDRuMzRz" target="_blank" class="footer-link">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a> | 
+                <a href="https://discord.com/channels/1365705039691386960/1365705039691386964" target="_blank" class="footer-link">
+                    <i class="fab fa-discord"></i> Discord
+                </a> | 
+                <a href="https://github.com/jackylynHyeYoo042202" target="_blank" class="footer-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </p>
+            <p>Thanks for visiting — stay curious and keep building!</p>
+        </div>
+    </footer>
+
+</body>
+<!-- Modal for Image Preview -->
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <img id="modalImage" src="" alt="Preview Image">
+    </div>
+</div>
+<script>
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const modalClose = document.querySelector('.modal-close');
+
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "flex";
+            modalImg.src = this.src;
+        });
+    });
+
+    modalClose.addEventListener('click', function() {
+        modal.style.display = "none";
+    });
+
+    // Optional: close when clicking outside the modal content
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
+
+
+</html>
